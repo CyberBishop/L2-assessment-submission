@@ -1,0 +1,52 @@
+Output From Task 1:
+Top 5 IP addresses by request count:
+221.34.171.155: 383 requests
+145.98.68.30: 380 requests
+110.105.174.63: 361 requests
+24.74.238.114: 355 requests
+32.90.145.204: 354 requests
+
+Percentage of requests with status 400-599: 47.29%
+
+Average response size for GET requests: 2537.31 bytes
+
+Output From Task 3:
+Potential Attack Patterns Summary:
+
+Flagged IPs that hit rate limit (429) potential bruteforce attack:
+- 110.105.174.63 (110 times)
+- 49.217.128.165 (114 times)
+- 145.98.68.30 (106 times)
+- 32.90.145.204 (102 times)
+- 49.17.221.77 (108 times)
+- 24.74.238.114 (114 times)
+- 221.34.171.155 (121 times)
+- 188.230.178.192 (108 times)
+
+Flagged IPs that caused 503 errors on login path (potential SQL injection):
+- 110.105.174.63 (129 times)
+- 49.217.128.165 (118 times)
+- 32.90.145.204 (134 times)
+- 145.98.68.30 (135 times)
+- 49.17.221.77 (121 times)
+- 24.74.238.114 (134 times)
+- 221.34.171.155 (123 times)
+- 188.230.178.192 (117 times)
+
+Abnormal Request Frequencies (>15 requests in 5 minutes):
+- IP 145.98.68.30 sent 16 requests between 2025-05-17 08:59:15+08:00 and 2025-05-17 09:04:11+08:00 (>15 in 5 mins)
+- IP 110.105.174.63 sent 17 requests between 2025-05-17 08:50:31+08:00 and 2025-05-17 08:55:16+08:00 (>15 in 5 mins)
+
+Output From Task 4:
+# Find the hour of the day with the highest average response time.
+22|905.177514792899 # The 22nd hour (10 PM) has the highest average response time of 905.18 ms
+
+# Identify any IPs that sent more than 100 requests with a 429 status code (rate-limited).
+119.103.226.136|358
+122.157.29.219|363
+148.57.203.182|344
+17.237.57.99|338
+81.233.238.12|333
+
+# Calculate the total bytes sent for requests where response time > 500ms.
+10719865
